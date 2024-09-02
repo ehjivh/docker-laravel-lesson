@@ -20,3 +20,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::get('/health', function () {
     return response()->json(['message' => 'API is healthy']);
 });
+
+Route::apiResource("todos", "App/Http/Controllers/TodoController");
